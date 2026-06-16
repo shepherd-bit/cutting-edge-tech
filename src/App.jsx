@@ -43,7 +43,7 @@ function App() {
       <section className="hero-section">
         {/* Background Video */}
         <video autoPlay loop muted playsInline className="hero-video">
-          <source src="/background.mp4" type="video/mp4" />
+          <source src={`${import.meta.env.BASE_URL}background.mp4`} type="video/mp4" />
           Your browser does not support the video tag.
         </video>
 
