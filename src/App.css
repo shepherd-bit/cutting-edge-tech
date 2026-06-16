@@ -1,0 +1,974 @@
+/* Reset default browser spacing */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+}
+
+body {
+  background-color: #ffffff;
+}
+
+/* 1. TOPMOST BAR STYLES */
+.top-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 70px;
+  background-color: #ffffff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 2rem;
+  border-bottom: 1px solid #e2e8f0;
+  z-index: 1000;
+}
+
+.top-bar-left {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.logo-img {
+  height: 40px;
+  width: auto;
+}
+
+.logo-text {
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: #0A192F;
+  letter-spacing: -0.5px;
+}
+
+.top-bar-right {
+  display: flex;
+  align-items: center;
+  gap: 1rem; /* Slightly tighter gap to comfortably fit buttons */
+  flex-grow: 0.5;
+  justify-content: flex-end;
+}
+
+.search-container {
+  display: flex;
+  width: 100%;
+  max-width: 450px;
+  margin-right: 0.5rem;
+}
+
+.search-input {
+  width: 100%;
+  padding: 0.6rem 1rem;
+  border: 1px solid #cbd5e1;
+  border-right: none;
+  border-top-left-radius: 4px;
+  border-bottom-left-radius: 4px;
+  outline: none;
+  font-size: 0.9rem;
+}
+
+.search-btn {
+  padding: 0.6rem 1.2rem;
+  background-color: #0A192F;
+  color: #ffffff;
+  border: 1px solid #0A192F;
+  border-top-right-radius: 4px;
+  border-bottom-right-radius: 4px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: background 0.2s;
+}
+
+.search-btn:hover {
+  background-color: #112240;
+}
+
+/* Log In Button Styling */
+.login-btn {
+  padding: 0.6rem 1.2rem;
+  background-color: transparent;
+  color: #0A192F;
+  border: 1px solid #0A192F;
+  border-radius: 4px;
+  font-weight: 600;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: all 0.2s;
+}
+
+.login-btn:hover {
+  background-color: #f1f5f9;
+}
+
+.signup-btn {
+  padding: 0.6rem 1.2rem;
+  background-color: #0066cc;
+  color: #ffffff;
+  border: none;
+  border-radius: 4px;
+  font-weight: 600;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: background 0.2s;
+}
+
+.signup-btn:hover {
+  background-color: #0052a3;
+}
+
+/* 2. SECOND BAR STYLES */
+.nav-bar {
+  position: fixed;
+  top: 70px;
+  left: 0;
+  width: 100%;
+  height: 50px;
+  background-color: #0A192F;
+  display: flex;
+  align-items: center;
+  padding: 0 2rem;
+  z-index: 999;
+}
+
+.nav-links {
+  display: flex;
+  list-style: none;
+  gap: 2rem;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #a8b2d1;
+  font-weight: 500;
+  font-size: 0.95rem;
+  transition: color 0.2s;
+}
+
+.nav-links a:hover, 
+.nav-links a.active {
+  color: #ffffff;
+}
+
+/* Layout spacer for main content */
+.vanguard-app {
+  padding-top: 120px;
+}
+/* ========================================================= */
+/* 3. HERO SECTION STYLES                                    */
+/* ========================================================= */
+.hero-section {
+  position: relative;
+  width: 100vw;       /* Forces it to match 100% of the viewport window width */
+  left: 50%;          /* Breaks out of any centered layout boxes */
+  right: 50%;
+  margin-left: -50vw; /* Perfectly re-centers the full-screen block */
+  margin-right: -50vw;
+  height: calc(100vh - 120px); 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  background-color: #0A192F; 
+}
+
+.hero-video {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  transform: translate(-50%, -50%);
+  object-fit: cover;
+  z-index: 1;
+}
+
+/* The modern, glass-like semi-transparent text box */
+.hero-content-box {
+  position: relative;
+  z-index: 2; /* Sits completely on top of video */
+  max-width: 850px;
+  margin: 0 2rem;
+  padding: 3rem;
+  background: rgba(10, 25, 47, 0.85); /* Deep Navy matching your palette with 85% opacity */
+  border: 1px solid rgba(255, 255, 255, 0.1); /* Subtle cyber glass edge boundary */
+  border-radius: 8px;
+  backdrop-filter: blur(8px); /* Optional: Softly blurs the moving video behind text */
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+  text-align: center;
+}
+
+.hero-text {
+  color: #ffffff;
+  font-size: 1.15rem;
+  line-height: 1.75;
+  font-weight: 400;
+  margin-bottom: 2.5rem;
+  letter-spacing: 0.2px;
+}
+
+.hero-actions {
+  display: flex;
+  gap: 1.5rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.hero-btn-primary {
+  padding: 0.8rem 2rem;
+  background-color: #0066cc;
+  color: #ffffff;
+  border: none;
+  border-radius: 4px;
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.hero-btn-primary:hover {
+  background-color: #0052a3;
+}
+
+.hero-btn-secondary {
+  padding: 0.8rem 2rem;
+  background-color: transparent;
+  color: #ffffff;
+  border: 1px solid #ffffff;
+  border-radius: 4px;
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.hero-btn-secondary:hover {
+  background-color: #ffffff;
+  color: #0A192F;
+}
+/* ========================================================= */
+/* 5. TRENDING CUTTING-EDGE TECHNOLOGIES GRID STYLES          */
+/* ========================================================= */
+.trending-section {
+  position: relative;
+  width: 100vw;
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
+  padding: 6rem 4rem 3rem 4rem;
+  background-color: #f8fafc; /* Subtle off-white to isolate from standard sections */
+}
+
+.trending-header {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.trending-tag {
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: #0066cc;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.trending-title {
+  font-size: 2.25rem;
+  font-weight: 800;
+  color: #0A192F;
+  margin: 0.5rem 0;
+  letter-spacing: -0.5px;
+}
+
+.trending-subtitle {
+  color: #64748b;
+  font-size: 1.1rem;
+}
+
+/* Edge-to-Edge Desktop Grid Scaling (Image 38a01e.png Breakout Fix) */
+.trending-grid {
+  width: 100%;
+  max-width: 95%;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 3rem;
+}
+
+/* Premium Visual Content Cards */
+.trending-card {
+  background-color: #ffffff;
+  border-radius: 8px;
+  overflow: hidden;
+  border: 1px solid #e2e8f0;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.03);
+  display: flex;
+  flex-direction: column;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.trending-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 20px 25px -5px rgba(10, 25, 47, 0.08);
+  border-color: #cbd5e1;
+}
+
+/* Image Assets Frame Container */
+.card-image-wrapper {
+  position: relative;
+  width: 100%;
+  height: 220px;
+  background-color: #0A192F;
+}
+
+.card-image-placeholder {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #a8b2d1;
+  font-size: 0.9rem;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+  background: linear-gradient(135deg, #0A192F 0%, #112240 100%);
+  opacity: 0.85;
+}
+
+.card-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Card Information Body block */
+.trending-card-body {
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+/* Flexible Category Tag System */
+.tech-badge {
+  display: inline-block;
+  align-self: flex-start;
+  font-size: 0.72rem;
+  font-weight: 700;
+  padding: 0.3rem 0.7rem;
+  border-radius: 4px;
+  text-transform: uppercase;
+  letter-spacing: 0.2px;
+  margin-bottom: 1rem;
+  background-color: #f1f5f9;
+  color: #334155;
+}
+
+/* Accent Badge Overrides (Optional Context Styling) */
+.badge-ai { background-color: rgba(0, 102, 204, 0.1); color: #0066cc; }
+.badge-ev { background-color: rgba(16, 185, 129, 0.1); color: #10b981; }
+.badge-defense { background-color: rgba(239, 68, 68, 0.1); color: #ef4444; }
+
+.tech-topic {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: #0A192F;
+  line-height: 1.35;
+  margin-bottom: 1rem;
+}
+
+.tech-summary {
+  font-size: 0.92rem;
+  color: #475569;
+  line-height: 1.65;
+  margin-bottom: 2rem;
+  flex-grow: 1; /* Aligns all buttons across matching grid heights perfectly */
+}
+
+/* Refined Minimalist Action Trigger */
+.tech-explore-btn {
+  align-self: flex-start;
+  background: transparent;
+  border: none;
+  color: #0066cc;
+  font-weight: 700;
+  font-size: 0.95rem;
+  cursor: pointer;
+  padding: 0;
+  transition: color 0.2s ease;
+}
+
+.tech-explore-btn:hover {
+  color: #0A192F;
+}
+
+/* Responsive Media Controls */
+@media (max-width: 1200px) {
+  .trending-grid {
+    grid-template-columns: repeat(2, 1fr);
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  .trending-section {
+    padding: 4rem 1.5rem;
+  }
+  .trending-grid {
+    grid-template-columns: 1fr;
+  }
+}
+/* ========================================================= */
+/* 6. PAGINATION CONTROLS STYLES                             */
+/* ========================================================= */
+.pagination-container {
+  width: 100vw;
+  position: relative;
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
+  background-color: #f8fafc; /* Matches background color of the trending section */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem 0 6rem 0;
+}
+
+.pag-numbers-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  background-color: #ffffff;
+  padding: 0.6rem 1.5rem;
+  border-radius: 50px;
+  border: 1px solid #e2e8f0;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03);
+}
+
+.pag-num {
+  width: 36px;
+  height: 36px;
+  background-color: transparent;
+  color: #475569;
+  border: none;
+  border-radius: 50%;
+  font-weight: 600;
+  font-size: 0.9rem;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.2s ease;
+}
+
+.pag-num:hover {
+  background-color: #f1f5f9;
+  color: #0A192F;
+}
+
+.pag-num.active {
+  background-color: #0A192F;
+  color: #ffffff;
+}
+
+.pag-ellipsis {
+  color: #94a3b8;
+  font-weight: 600;
+  padding: 0 0.25rem;
+}
+
+.pag-next-prompt {
+  background-color: transparent;
+  border: none;
+  color: #0066cc;
+  font-weight: 700;
+  font-size: 0.9rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding-left: 0.75rem;
+  margin-left: 0.5rem;
+  border-left: 1px solid #e2e8f0;
+  transition: color 0.2s;
+}
+
+.pag-next-prompt:hover {
+  color: #0A192F;
+}
+
+.pag-next-prompt .arrow-icon {
+  font-size: 1.1rem;
+  transition: transform 0.2s;
+}
+
+.pag-next-prompt:hover .arrow-icon {
+  transform: translateX(3px);
+}
+
+/* ========================================================= */
+/* 7. FRONTIER OPPORTUNITIES HUB STYLES (UPDATED)            */
+/* ========================================================= */
+.opportunities-section {
+  position: relative;
+  width: 100vw;
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
+  padding: 6rem 4rem;
+  background-color: #1e293b; /* Reduced intensity: Changed from deep midnight navy to slate gray */
+  color: #ffffff;
+}
+
+.opportunities-header {
+  text-align: center;
+  margin-bottom: 4.5rem;
+}
+
+.opp-tag {
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: #38bdf8; /* Swapped to a brighter sky blue variant for optimal text contrast */
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+}
+
+.opp-title {
+  font-size: 2.25rem;
+  font-weight: 800;
+  margin: 0.5rem 0;
+  letter-spacing: -0.5px;
+  color: #ffffff; /* Fixed legibility issue seen in image_374f61.png */
+}
+
+.opp-subtitle {
+  color: #cbd5e1;
+  font-size: 1.1rem;
+}
+
+.opportunities-split-grid {
+  width: 100%;
+  max-width: 95%;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 4rem;
+}
+
+.opp-column-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 2rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  padding-bottom: 1.2rem;
+}
+
+.opp-column-header h3 {
+  font-size: 1.4rem;
+  font-weight: 700;
+  letter-spacing: -0.3px;
+  color: #ffffff;
+}
+
+.opp-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.75rem;
+}
+
+/* Base Card Block Modules remain structurally intact */
+.opp-item {
+  background-color: #112240; 
+  border: 1px solid rgba(255, 255, 255, 0.03);
+  border-radius: 8px;
+  padding: 2rem;
+  transition: transform 0.2s, border-color 0.2s;
+}
+
+.opp-item:hover {
+  transform: translateY(-3px);
+  border-color: rgba(56, 189, 248, 0.4);
+}
+
+.opp-item-meta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.meta-badge {
+  font-size: 0.68rem;
+  font-weight: 700;
+  padding: 0.25rem 0.6rem;
+  border-radius: 4px;
+  text-transform: uppercase;
+  letter-spacing: 0.3px;
+}
+
+.contract-badge { background-color: #0066cc; color: #ffffff; }
+.career-badge { background-color: #10b981; color: #ffffff; }
+
+.meta-value {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #38bdf8;
+}
+
+.opp-item h4 {
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin-bottom: 0.75rem;
+  line-height: 1.4;
+  color: #ffffff;
+}
+
+.opp-item p {
+  color: #94a3b8;
+  font-size: 0.9rem;
+  line-height: 1.6;
+  margin-bottom: 1.75rem;
+}
+
+.opp-item-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.8rem;
+  color: #94a3b8;
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+  padding-top: 1.2rem;
+}
+
+.opp-link {
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: 700;
+  transition: color 0.2s;
+}
+
+.opp-link:hover {
+  color: #38bdf8;
+}
+
+/* Centralized Global Explore Button Styles */
+.opportunities-footer-action {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-top: 4.5rem;
+}
+
+.opp-explore-global-btn {
+  background-color: #0066cc;
+  color: #ffffff;
+  border: none;
+  border-radius: 4px;
+  padding: 1rem 2.5rem;
+  font-size: 1rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.2);
+}
+
+.opp-explore-global-btn:hover {
+  background-color: #0052a3;
+  transform: translateY(-2px);
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.3);
+}
+
+/* Tablet & Mobile Media Breakpoints */
+@media (max-width: 1024px) {
+  .opportunities-split-grid {
+    grid-template-columns: 1fr;
+    gap: 3.5rem;
+    max-width: 100%;
+  }
+  .opportunities-section {
+    padding: 5rem 2rem;
+  }
+}
+/* ========================================================= */
+/* 8. "THE BRIEF" (NEWSLETTER TEASER) STYLES                */
+/* ========================================================= */
+.brief-newsletter-section {
+  position: relative;
+  width: 100vw;
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
+  padding: 5rem 4rem;
+  background: linear-gradient(135deg, #0A192F 0%, #0d1e36 100%); /* Full-width deep Navy Blue */
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+  color: #ffffff;
+}
+
+.brief-container {
+  width: 100%;
+  max-width: 95%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 4rem;
+}
+
+.brief-content {
+  max-width: 550px;
+}
+
+.brief-tag {
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: #0066cc;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  display: inline-block;
+  margin-bottom: 0.5rem;
+}
+
+.brief-headline {
+  font-size: 2.25rem;
+  font-weight: 800;
+  letter-spacing: -0.5px;
+  margin-bottom: 0.75rem;
+  color: #ffffff;
+}
+
+.brief-subdeck {
+  color: #8892b0;
+  font-size: 1.05rem;
+  line-height: 1.5;
+}
+
+/* Form Action Module Container */
+.brief-action-form {
+  flex-grow: 1;
+  max-width: 500px;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.newsletter-inline-form {
+  display: flex;
+  width: 100%;
+  background-color: #ffffff;
+  padding: 0.35rem;
+  border-radius: 6px;
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.3);
+}
+
+.newsletter-input {
+  flex-grow: 1;
+  border: none;
+  outline: none;
+  padding: 0 1rem;
+  font-size: 0.95rem;
+  color: #0A192F;
+  background-color: transparent;
+  width: 100%;
+}
+
+.newsletter-input::placeholder {
+  color: #94a3b8;
+}
+
+.newsletter-submit-btn {
+  background-color: #0066cc;
+  color: #ffffff;
+  border: none;
+  font-weight: 700;
+  font-size: 0.95rem;
+  padding: 0.85rem 1.75rem;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+  white-space: nowrap;
+}
+
+.newsletter-submit-btn:hover {
+  background-color: #0052a3;
+}
+
+.newsletter-privacy-note {
+  font-size: 0.75rem;
+  color: #64748b;
+  padding-left: 0.35rem;
+}
+
+/* Responsive Media Breakpoints */
+@media (max-width: 1024px) {
+  .brief-container {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 2.5rem;
+    max-width: 100%;
+  }
+  
+  .brief-content, 
+  .brief-action-form {
+    max-width: 100%;
+    width: 100%;
+  }
+}
+
+@media (max-width: 520px) {
+  .newsletter-inline-form {
+    flex-direction: column;
+    background-color: transparent;
+    padding: 0;
+    gap: 0.75rem;
+    box-shadow: none;
+  }
+
+  .newsletter-input {
+    background-color: #ffffff;
+    padding: 1rem;
+    border-radius: 6px;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+  }
+
+  .newsletter-submit-btn {
+    padding: 1rem;
+    border-radius: 6px;
+    width: 100%;
+    text-align: center;
+  }
+}
+/* ========================================================= */
+/* 9. GLOBAL STRATEGIC FOOTER STYLES                         */
+/* ========================================================= */
+.global-footer {
+  position: relative;
+  width: 100vw;
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
+  background-color: #030712; /* Rich dark footer block to contrast with news section */
+  padding: 4rem 4rem 3rem 4rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+  text-align: center;
+}
+
+.footer-container {
+  width: 100%;
+  max-width: 95%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem; /* Balanced spacing between consecutive lines */
+}
+
+.footer-line {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Line 1: Centered Media Horizon Icons */
+.footer-socials {
+  gap: 2.5rem; 
+}
+
+.social-icon-link {
+  color: #64748b;
+  transition: color 0.2s ease, transform 0.2s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Add this new block directly beneath it to scale the icon images up */
+.social-icon-link svg {
+  width: 27px;  /* Increased from 20px to make them noticebly larger */
+  height: 27px; /* Increased from 20px to maintain perfect square aspect ratio */
+}
+
+.social-icon-link:hover {
+  color: #0066cc; 
+  transform: translateY(-2px);
+}
+
+/* Second Line: Copyright Parameters */
+.footer-copyright p {
+  color: #94a3b8;
+  font-size: 0.9rem;
+  font-weight: 500;
+  letter-spacing: 0.3px;
+}
+
+/* Third Line: Active Comms Telemetry Links */
+.footer-contact p {
+  color: #64748b;
+  font-size: 0.85rem;
+  font-weight: 500;
+}
+
+.footer-contact a {
+  color: #cbd5e1;
+  text-decoration: none;
+  transition: color 0.15s ease;
+}
+
+.footer-contact a:hover {
+  color: #0066cc;
+}
+
+.contact-divider {
+  margin: 0 1rem;
+  color: rgba(255, 255, 255, 0.1);
+  font-weight: 300;
+}
+
+/* Last Line: Pulsing/Glowing Yellow Custom Disclaimer Engine */
+.glowing-disclaimer-text {
+  font-size: 0.8rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  animation: pulseYellowGlow 3s ease-in-out infinite;
+}
+
+@keyframes pulseYellowGlow {
+  0% {
+    color: #eab308; /* Premium system amber/yellow */
+    text-shadow: 0 0 4px rgba(234, 179, 8, 0.1);
+  }
+  50% {
+    color: #fde047; /* Peak expansion value */
+    text-shadow: 0 0 14px rgba(234, 179, 8, 0.6), 0 0 22px rgba(234, 179, 8, 0.2);
+    transform: scale(1.02);
+  }
+  100% {
+    color: #eab308;
+    text-shadow: 0 0 4px rgba(234, 179, 8, 0.1);
+  }
+}
+
+/* Fluid Layout Controls */
+@media (max-width: 640px) {
+  .global-footer {
+    padding: 3.5rem 1.5rem 2.5rem 1.5rem;
+  }
+  .footer-contact p {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  .contact-divider {
+    display: none;
+  }
+}
