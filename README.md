@@ -6,7 +6,7 @@ Welcome to the primary entry point for **Vanguard**. This landing page is an ama
 
 ## Project Preview
 
-![Tech Exhibition Website Preview](/vanguard-landing-page.PNG)
+![Tech Exhibition Website Preview](public/vanguard-landing-page.PNG)
 
 ---
 
