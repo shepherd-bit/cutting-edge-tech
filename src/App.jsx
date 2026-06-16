@@ -7,7 +7,7 @@ function App() {
       {/* 1. TOPMOST BAR (Pure White) */}
       <header className="top-bar">
         <div className="top-bar-left">
-          <img src="/logo-removebg.png" alt="Vanguard Logo" className="logo-img" />
+          <source src={`${import.meta.env.BASE_URL}background.mp4`} type="video/mp4" />
           <span className="logo-text">Vanguard</span>
         </div>
         
