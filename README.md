@@ -4,6 +4,10 @@
 
 Welcome to the primary entry point for **Vanguard**. This landing page is an amalgamation of all directions and resources visitors need regarding the company's products and services. It functions as a complete "Tech Evolution Portal," providing students, industry employees, and technology enthusiasts with a direct portal to the absolute future of technology[cite: 1].
 
+## Project Preview
+
+![Tech Exhibition Website Preview](/vanguard-landing-page.PNG)
+
 ---
 
 ## 🌐 Project Overview
