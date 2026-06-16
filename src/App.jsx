@@ -78,7 +78,7 @@ function App() {
           {/* Card 1 */}
           <div className="trending-card">
             <div className="card-image-wrapper">
-              <img src="/trending/agentic-ai-visual.webp" alt="Agentic AI & Multi-Modal Reasoners" className="card-img" />
+              <img src={`${import.meta.env.BASE_URL}trending/agentic-ai-visual.webp`} alt="Agentic AI & Multi-Modal Reasoners" className="card-img" />
             </div>
             <div className="trending-card-body">
               <span className="tech-badge badge-ai">Artificial Intelligence (AI) & Machine Learning</span>
@@ -93,7 +93,7 @@ function App() {
           {/* Card 2 */}
           <div className="trending-card">
             <div className="card-image-wrapper">
-              <img src="/trending/assbs-visual.jpg" alt="All-Solid-State Batteries" className="card-img" />
+              <img src={`${import.meta.env.BASE_URL}trending/assbs-visual.jpg`} alt="All-Solid-State Batteries" className="card-img" />
             </div>
             <div className="trending-card-body">
               <span className="tech-badge badge-ev">Electric Vehicles (EVs) & Autonomous Driving</span>
@@ -108,7 +108,7 @@ function App() {
           {/* Card 3 */}
           <div className="trending-card">
             <div className="card-image-wrapper">
-              <img src="/trending/mobile-visual.webp" alt="On-Device Hybrid AI & Tri-Fold Displays" className="card-img" />
+              <img src={`${import.meta.env.BASE_URL}trending/mobile-visual.webp`} alt="On-Device Hybrid AI & Tri-Fold Displays" className="card-img" />
             </div>
             <div className="trending-card-body">
               <span className="tech-badge badge-mobile">Smartphones & Mobile Devices</span>
@@ -123,7 +123,7 @@ function App() {
           {/* Card 4 */}
           <div className="trending-card">
             <div className="card-image-wrapper">
-              <img src="/trending/defense-visual.jpg" alt="Hypersonic Glide Vehicles & Autonomous Drone Swarms" className="card-img" />
+              <img src={`${import.meta.env.BASE_URL}trending/defense-visual.jpg`} alt="Hypersonic Glide Vehicles & Autonomous Drone Swarms" className="card-img" />
             </div>
             <div className="trending-card-body">
               <span className="tech-badge badge-defense">Defense Tech & Advanced Weapons</span>
@@ -138,7 +138,7 @@ function App() {
           {/* Card 5 */}
           <div className="trending-card">
             <div className="card-image-wrapper">
-              <img src="/trending/biotech-visual.webp" alt="Biotechnology & Genetic Engineering" className="card-img" />
+              <img src={`${import.meta.env.BASE_URL}trending/biotech-visual.webp`} alt="Biotechnology & Genetic Engineering" className="card-img" />
             </div>
             <div className="trending-card-body">
               <span className="tech-badge badge-biotech">Biotechnology & Genetic Engineering</span>
@@ -153,7 +153,7 @@ function App() {
           {/* Card 6 */}
           <div className="trending-card">
             <div className="card-image-wrapper">
-              <img src="/trending/aerospace-visual.jpg" alt="Aerospace & Space Exploration" className="card-img" />
+              <img src={`${import.meta.env.BASE_URL}trending/aerospace-visual.jpg`} alt="Aerospace & Space Exploration" className="card-img" />
             </div>
             <div className="trending-card-body">
               <span className="tech-badge badge-space">Aerospace & Space Exploration</span>
@@ -168,7 +168,7 @@ function App() {
           {/* Card 7 */}
           <div className="trending-card">
             <div className="card-image-wrapper">
-              <img src="/trending/energy-visual.webp" alt="Renewable Energy & Cleantech" className="card-img" />
+              <img src={`${import.meta.env.BASE_URL}trending/energy-visual.webp`} alt="Renewable Energy & Cleantech" className="card-img" />
             </div>
             <div className="trending-card-body">
               <span className="tech-badge badge-energy">Renewable Energy & Cleantech</span>
@@ -183,7 +183,7 @@ function App() {
           {/* Card 8 */}
           <div className="trending-card">
             <div className="card-image-wrapper">
-              <img src="/trending/quantum-visual.png" alt="Quantum Computing" className="card-img" />
+              <img src={`${import.meta.env.BASE_URL}trending/quantum-visual.png`} alt="Quantum Computing" className="card-img" />
             </div>
             <div className="trending-card-body">
               <span className="tech-badge badge-quantum">Quantum Computing</span>
@@ -198,7 +198,7 @@ function App() {
           {/* Card 9 */}
           <div className="trending-card">
             <div className="card-image-wrapper">
-              <img src="/trending/cloud-visual.webp" alt="Cloud Computing & Infrastructure" className="card-img" />
+              <img src={`${import.meta.env.BASE_URL}trending/cloud-visual.webp`} alt="Cloud Computing & Infrastructure" className="card-img" />
             </div>
             <div className="trending-card-body">
               <span className="tech-badge badge-cloud">Cloud Computing & Infrastructure</span>
@@ -213,7 +213,7 @@ function App() {
           {/* Card 10 */}
           <div className="trending-card">
             <div className="card-image-wrapper">
-              <img src="/trending/cyber-visual.webp" alt="Cybersecurity" className="card-img" />
+              <img src={`${import.meta.env.BASE_URL}trending/cyber-visual.webp`} alt="Cybersecurity" className="card-img" />
             </div>
             <div className="trending-card-body">
               <span className="tech-badge badge-cyber">Cybersecurity</span>
@@ -228,7 +228,7 @@ function App() {
           {/* Card 11 */}
           <div className="trending-card">
             <div className="card-image-wrapper">
-              <img src="/trending/robotics-visual.jpg" alt="Robotics & Automation" className="card-img" />
+              <img src={`${import.meta.env.BASE_URL}trending/robotics-visual.jpg`} alt="Robotics & Automation" className="card-img" />
             </div>
             <div className="trending-card-body">
               <span className="tech-badge badge-robotics">Robotics & Automation</span>
@@ -243,7 +243,7 @@ function App() {
           {/* Card 12 */}
           <div className="trending-card">
             <div className="card-image-wrapper">
-              <img src="/trending/semiconductor-visual.webp" alt="Semiconductors & Microchip Manufacturing" className="card-img" />
+              <img src={`${import.meta.env.BASE_URL}trending/semiconductor-visual.webp`} alt="Semiconductors & Microchip Manufacturing" className="card-img" />
             </div>
             <div className="trending-card-body">
               <span className="tech-badge badge-semi">Semiconductors & Microchip Manufacturing</span>
@@ -258,7 +258,7 @@ function App() {
           {/* Card 13 */}
           <div className="trending-card">
             <div className="card-image-wrapper">
-              <img src="/trending/arvr-visual.png" alt="Virtual Reality (VR) & Augmented Reality (AR)" className="card-img" />
+              <img src={`${import.meta.env.BASE_URL}trending/arvr-visual.png`} alt="Virtual Reality (VR) & Augmented Reality (AR)" className="card-img" />
             </div>
             <div className="trending-card-body">
               <span className="tech-badge badge-arvr">Virtual Reality (VR) & Augmented Reality (AR)</span>
@@ -273,7 +273,7 @@ function App() {
           {/* Card 14 */}
           <div className="trending-card">
             <div className="card-image-wrapper">
-              <img src="/trending/IoT-visual.webp" alt="Internet of Things (IoT) & Smart Home Tech" className="card-img" />
+              <img src={`${import.meta.env.BASE_URL}trending/IoT-visual.webp`} alt="Internet of Things (IoT) & Smart Home Tech" className="card-img" />
             </div>
             <div className="trending-card-body">
               <span className="tech-badge badge-iot">Internet of Things (IoT) & Smart Home Tech</span>
@@ -288,7 +288,7 @@ function App() {
           {/* Card 15 */}
           <div className="trending-card">
             <div className="card-image-wrapper">
-              <img src="/trending/fintech-visual.jpg" alt="FinTech (Financial Technology)" className="card-img" />
+              <img src={`${import.meta.env.BASE_URL}trending/fintech-visual.jpg`} alt="FinTech (Financial Technology)" className="card-img" />
             </div>
             <div className="trending-card-body">
               <span className="tech-badge badge-fintech">FinTech (Financial Technology)</span>
